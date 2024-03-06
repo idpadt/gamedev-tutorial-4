@@ -13,8 +13,8 @@ Saat Player menyentuh area DeathZone, maka akan menjalankan func player_lose di 
 Saat Player menyentuh area WinZone, maka akan menjalankan func player_win di script root node level, yang mana akan memunculkan LoseScreen (dijelaskan lebih lanjut dalam seksi Level).
 
 ### Level
-Script ini berisi mayoritas fungsi. Saat ready, akan dijalankan paused = false agar waktu berhenti, dan start_spawner untuk menjalankan spawner. Fungsi kill_fish dan kill_slime berfungsi menghilangkan instance dari fish dan slime saat player mati, seperti semacam reset.
+Script ini berisi mayoritas fungsi. Saat ready, akan dijalankan paused = false agar waktu berjalan, dan start_spawner untuk menjalankan spawner. Fungsi kill_fish dan kill_slime berfungsi menghilangkan instance dari fish dan slime saat player mati, seperti semacam reset.
 
-Player_lose dijalankan saat player mati. Fungsi ini akan memberhentikan player, dan memperlihatkan LoseScreen. Setelah beberapa detik, Player akan di reset posisinya, menghilangkan LoseScreen, menjalankan player, menjalankan kill_fish atau kill_slime, dan mengulang kembali spawnernya.
+Player_lose dijalankan saat player mati. Fungsi ini akan memberhentikan waktu, dan memperlihatkan LoseScreen. Setelah beberapa detik, Player akan di reset posisinya, menghilangkan LoseScreen, menjalankan waktu, menjalankan kill_fish atau kill_slime, dan mengulang kembali spawnernya.
 
-Player_win dijalankan saat player menang. Fungsi ini akan memberhentikan player dan memperlihatkan WinScreen. WinScreen berisi sebuah button yang saat dipencet, akan memindahkan ke scene baru (lvl 1 ke lvl 2, lvl 2 ke lvl 1 kembali)
+Player_win dijalankan saat player menang. Fungsi ini akan memberhentikan waktu dan memperlihatkan WinScreen. WinScreen berisi sebuah button yang saat dipencet, akan memindahkan ke scene baru (lvl 1 ke lvl 2, lvl 2 ke lvl 1 kembali)
