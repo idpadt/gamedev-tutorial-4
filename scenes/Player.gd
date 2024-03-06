@@ -8,7 +8,6 @@ export var jump_speed: int = -400
 
 var velocity: Vector2 = Vector2()
 
-
 func get_input():
 	velocity.x = 0
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
@@ -19,7 +18,7 @@ func get_input():
 		velocity.x -= speed
 
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	velocity.y += delta * GRAVITY
 	get_input()
 	velocity = move_and_slide(velocity, UP)
@@ -36,3 +35,5 @@ func _process(_delta):
 			$Sprite.flip_h = true
 	else:
 		$Animator.play("Idle")
+
+
